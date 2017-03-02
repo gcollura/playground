@@ -9,10 +9,9 @@
  * }
  */
 
-int CompareLists(Node* headA, Node* headB) {
-    if (headA == headB && headA == NULL) return 1;
-    if (headA == NULL && headB != NULL) return 0;
-    if (headA != NULL && headB == NULL) return 0;
-    return CompareLists(headA->next, headB->next) &&
-           (headA->data == headB->data);
+int CompareLists(Node *headA, Node *headB) {
+  if (headA == headB && headA == NULL) return 1;
+  if (headA == NULL && headB != NULL) return 0;
+  if (headA != NULL && headB == NULL) return 0;
+  return CompareLists(headA->next, headB->next) && (headA->data == headB->data);
 }

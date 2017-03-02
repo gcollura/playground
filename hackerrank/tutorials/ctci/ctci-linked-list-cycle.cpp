@@ -10,15 +10,15 @@
 */
 
 bool has_cycle(Node *head) {
-    // Complete this function
-    // Do not write the main method
-    if (head == NULL || head->next == NULL) return false;
-    Node *slow = head;
-    Node *fast = head->next->next;
-    while (slow != fast && slow != NULL && fast != NULL && fast->next != NULL) {
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    if (slow == fast && slow != NULL) return true;
-    return false;
+  // Complete this function
+  // Do not write the main method
+  if (head == NULL || head->next == NULL) return false;
+  Node *slow = head;
+  Node *fast = head->next->next;
+  while (slow != fast && slow != NULL && fast != NULL && fast->next != NULL) {
+    slow = slow->next;
+    fast = fast->next->next;
+  }
+  if (slow == fast && slow != NULL) return true;
+  return false;
 }

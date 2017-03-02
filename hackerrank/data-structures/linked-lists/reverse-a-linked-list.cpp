@@ -10,15 +10,15 @@
  */
 
 Node *Reverse(Node *head) {
-    Node *next, *prev, *node;
-    prev = NULL;
-    node = head;
-    next = node;
-    while (next != NULL) {
-        next = node->next;
-        node->next = prev;
-        prev = node;
-        node = next;
-    }
-    return prev;
+  Node *next, *prev, *node;
+  prev = NULL;
+  node = head;
+  next = node;
+  while (next != NULL) {
+    next = node->next;
+    node->next = prev;
+    prev = node;
+    node = next;
+  }
+  return prev;
 }

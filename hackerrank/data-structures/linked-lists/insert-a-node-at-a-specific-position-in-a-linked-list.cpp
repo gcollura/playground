@@ -11,15 +11,15 @@
  */
 
 Node *newNode(int data, Node *next) {
-    Node *node = new Node();
-    node->data = data;
-    node->next = next;
-    return node;
+  Node *node = new Node();
+  node->data = data;
+  node->next = next;
+  return node;
 }
 Node *InsertNth(Node *head, int data, int position) {
-    Node *node = head;
-    if (position == 0) return newNode(data, head);
-    for (int i = 0; i < position - 1; i++) node = node->next;
-    node->next = newNode(data, node->next);
-    return head;
+  Node *node = head;
+  if (position == 0) return newNode(data, head);
+  for (int i = 0; i < position - 1; i++) node = node->next;
+  node->next = newNode(data, node->next);
+  return head;
 }

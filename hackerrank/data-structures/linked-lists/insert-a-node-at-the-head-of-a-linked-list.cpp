@@ -11,9 +11,9 @@
  */
 
 Node *newNode(int data, Node *next) {
-    Node *node = new Node();
-    node->data = data;
-    node->next = next;
-    return node;
+  Node *node = new Node();
+  node->data = data;
+  node->next = next;
+  return node;
 }
 Node *Insert(Node *head, int data) { return newNode(data, head); }

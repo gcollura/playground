@@ -10,17 +10,17 @@
  */
 
 Node *newNode(int data, Node *next) {
-    Node *node = new Node();
-    node->data = data;
-    node->next = next;
-    return node;
+  Node *node = new Node();
+  node->data = data;
+  node->next = next;
+  return node;
 }
 Node *Insert(Node *head, int data) {
-    Node *node = head;
-    if (node == NULL) {
-        return newNode(data, NULL);
-    }
-    while (node->next != NULL) node = node->next;
-    node->next = newNode(data, NULL);
-    return head;
+  Node *node = head;
+  if (node == NULL) {
+    return newNode(data, NULL);
+  }
+  while (node->next != NULL) node = node->next;
+  node->next = newNode(data, NULL);
+  return head;
 }

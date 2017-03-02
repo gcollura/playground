@@ -10,10 +10,10 @@
  */
 
 void Print(Node *head) {
-    if (head == NULL)
-        return;
-    else {
-        cout << head->data << endl;
-        Print(head->next);
-    }
+  if (head == NULL)
+    return;
+  else {
+    cout << head->data << endl;
+    Print(head->next);
+  }
 }
