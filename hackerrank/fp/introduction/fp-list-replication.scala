@@ -1,8 +1,11 @@
 object Solution {
-  def f(num: Int, arr: List[Int]) : List[Int] {
-  }
+  def repeat[T](num: Int, e: T): List[T] =
+    if (num <= 0) Nil else e :: repeat(num - 1, e);
+
+  def f(num:Int, arr: List[Int]): List[Int] =
+    arr.flatMap(repeat(num, _))
+
   def main(args: Array[String]) {
-    var n = io.Source.stdin.getLines().take(1).toInt
-    println(io.Source.stdin.getLines().take(n).map(_.toInt).sum)
+    f(args(0).toInt, args.drop(1).map(_.toInt).toList).map(println _)
   }
 }
